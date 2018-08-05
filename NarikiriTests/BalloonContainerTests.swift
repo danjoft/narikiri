@@ -20,7 +20,7 @@ class BalloonContainerTests: XCTestCase {
         let contentFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
         let content = UIView(frame: contentFrame)
         let balloonContainer = BalloonContainer(content: content)
-        let margin = BalloonContainer.margin
+        let margin = balloonContainer.margin
         XCTAssertEqual(
             balloonContainer.frame,
             CGRect(

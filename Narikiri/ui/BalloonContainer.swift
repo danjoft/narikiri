@@ -42,13 +42,19 @@ class BalloonContainer: UIView, CommonUIView {
         }
     }
 
+    var margin: CGFloat {
+        get {
+            return BalloonContainer.margin
+        }
+    }
+
     private func updateView() {
         for subview in self.contentArea.subviews {
             subview.removeFromSuperview()
         }
         self.contentArea.addSubview(self._content)
         self._content.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: _content.bounds.size)
-        let margin = BalloonContainer.margin
+        let margin = self.margin
         self.contentArea.frame = CGRect(origin: CGPoint(x: margin, y: margin),
                                          size: _content.bounds.size)
         self.background.frame = CGRect(x: 0, y: 0,
