@@ -26,6 +26,7 @@
 		51A56B14211553ED007F6718 /* NarikiriUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A56B13211553ED007F6718 /* NarikiriUITests.swift */; };
 		51E8AFB12116FC1D0044C80B /* CommonUIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8AFB02116FC1D0044C80B /* CommonUIViewTests.swift */; };
 		51E8AFB32116FFBC0044C80B /* BalloonContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8AFB22116FFBC0044C80B /* BalloonContainerTests.swift */; };
+		51E8AFB521171ABC0044C80B /* TextBalloon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8AFB421171ABC0044C80B /* TextBalloon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		51A56B15211553ED007F6718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51E8AFB02116FC1D0044C80B /* CommonUIViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIViewTests.swift; sourceTree = "<group>"; };
 		51E8AFB22116FFBC0044C80B /* BalloonContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonContainerTests.swift; sourceTree = "<group>"; };
+		51E8AFB421171ABC0044C80B /* TextBalloon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBalloon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				51E8AFAF2115BAF30044C80B /* const */,
 				515F451C21156B74000E9BD9 /* BalloonContainer.xib */,
 				515F451321155E2C000E9BD9 /* BalloonContainer.swift */,
+				51E8AFB421171ABC0044C80B /* TextBalloon.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			files = (
 				51A56AF9211553EC007F6718 /* Narikiri.xcdatamodeld in Sources */,
 				515F451421155E2C000E9BD9 /* BalloonContainer.swift in Sources */,
+				51E8AFB521171ABC0044C80B /* TextBalloon.swift in Sources */,
 				51A56AF3211553EC007F6718 /* ViewController.swift in Sources */,
 				515F451821155F16000E9BD9 /* CommonUIView.swift in Sources */,
 				51A56AF1211553EC007F6718 /* AppDelegate.swift in Sources */,

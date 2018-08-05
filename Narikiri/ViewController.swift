@@ -26,6 +26,11 @@ class ViewController: UIViewController {
         balloon.frame(origin: CGPoint(x: 10, y: 200))
 
         view.addSubview(balloon)
+
+        ({
+            let balloon = TextBalloon(text: "うんこまるまるもりもりうんこ元気だよたべてねパクパク")
+            view.addSubview(balloon)
+        })()
     }
 
     override func didReceiveMemoryWarning() {
