@@ -15,8 +15,7 @@ class BalloonContainer: UIView, CommonUIView {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.initNib()
+        fatalError("init(coder:) has not been implemented")
     }
 
     convenience init(content: UIView) {
@@ -26,11 +25,7 @@ class BalloonContainer: UIView, CommonUIView {
 
     var content: UIView {
         set {
-            if let content = self._content {
-                content.removeFromSuperview()
-            }
             self._content = newValue
-            self.contentArea.addSubview(self._content)
             self.updateView()
         }
         get {
@@ -48,6 +43,10 @@ class BalloonContainer: UIView, CommonUIView {
     }
 
     private func updateView() {
+        for subview in self.contentArea.subviews {
+            subview.removeFromSuperview()
+        }
+        self.contentArea.addSubview(self._content)
         self._content.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: _content.bounds.size)
         let margin = BalloonContainer.margin
         self.contentArea.frame = CGRect(origin: CGPoint(x: margin, y: margin),

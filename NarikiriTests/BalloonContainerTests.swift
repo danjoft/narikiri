@@ -33,6 +33,30 @@ class BalloonContainerTests: XCTestCase {
         )
     }
 
+    func testTwiceContentAssigning() {
+        let firstContent = UIView(frame: CGRect(x: 99, y: 99, width: 200, height: 200))
+
+        let contentFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        let content = UIView(frame: contentFrame)
+
+        // assign first via initalizer
+        let balloonContainer = BalloonContainer(content: firstContent)
+        // assign target content
+        balloonContainer.content = content
+
+        let margin = BalloonContainer.margin
+        XCTAssertEqual(
+            balloonContainer.frame,
+            CGRect(
+                origin: CGPoint(x: 0, y: 0), // not same as content frame because this always must be zero.
+                size: CGSize(
+                    width: contentFrame.size.width + margin * 2,
+                    height: contentFrame.size.height + margin * 2
+                )
+            )
+        )
+    }
+
     func testContainerSizeTheContentOfWhichOriginIsNonZero() {
         let contentFrame = CGRect(x: 99, y: 99, width: 100, height: 100)
         let content = UIView(frame: contentFrame)
