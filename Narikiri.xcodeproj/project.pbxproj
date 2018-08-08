@@ -27,6 +27,8 @@
 		51E8AFB12116FC1D0044C80B /* CommonUIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8AFB02116FC1D0044C80B /* CommonUIViewTests.swift */; };
 		51E8AFB32116FFBC0044C80B /* BalloonContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8AFB22116FFBC0044C80B /* BalloonContainerTests.swift */; };
 		51E8AFB521171ABC0044C80B /* TextBalloon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8AFB421171ABC0044C80B /* TextBalloon.swift */; };
+		51E8AFCA21197FCC0044C80B /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8AFC821197FCC0044C80B /* ChatTableViewCell.swift */; };
+		51E8AFCB21197FCC0044C80B /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E8AFC921197FCC0044C80B /* ChatTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		51E8AFB02116FC1D0044C80B /* CommonUIViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIViewTests.swift; sourceTree = "<group>"; };
 		51E8AFB22116FFBC0044C80B /* BalloonContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonContainerTests.swift; sourceTree = "<group>"; };
 		51E8AFB421171ABC0044C80B /* TextBalloon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBalloon.swift; sourceTree = "<group>"; };
+		51E8AFC821197FCC0044C80B /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		51E8AFC921197FCC0044C80B /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 		51A56AEF211553EC007F6718 /* Narikiri */ = {
 			isa = PBXGroup;
 			children = (
+				51E8AFCC211ABBEE0044C80B /* New Group */,
+				51E8AFB7211924130044C80B /* chat */,
 				51E8AFAD21157BE10044C80B /* common */,
 				515F450E211559FD000E9BD9 /* ui */,
 				51A56AF0211553EC007F6718 /* AppDelegate.swift */,
@@ -182,6 +188,22 @@
 			children = (
 			);
 			path = const;
+			sourceTree = "<group>";
+		};
+		51E8AFB7211924130044C80B /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				51E8AFC821197FCC0044C80B /* ChatTableViewCell.swift */,
+				51E8AFC921197FCC0044C80B /* ChatTableViewCell.xib */,
+			);
+			path = chat;
+			sourceTree = "<group>";
+		};
+		51E8AFCC211ABBEE0044C80B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +312,7 @@
 			files = (
 				51A56AFE211553ED007F6718 /* LaunchScreen.storyboard in Resources */,
 				51A56AFB211553ED007F6718 /* Assets.xcassets in Resources */,
+				51E8AFCB21197FCC0044C80B /* ChatTableViewCell.xib in Resources */,
 				51A56AF6211553EC007F6718 /* Main.storyboard in Resources */,
 				515F451D21156B74000E9BD9 /* BalloonContainer.xib in Resources */,
 			);
@@ -322,6 +345,7 @@
 				515F451421155E2C000E9BD9 /* BalloonContainer.swift in Sources */,
 				51E8AFB521171ABC0044C80B /* TextBalloon.swift in Sources */,
 				51A56AF3211553EC007F6718 /* ViewController.swift in Sources */,
+				51E8AFCA21197FCC0044C80B /* ChatTableViewCell.swift in Sources */,
 				515F451821155F16000E9BD9 /* CommonUIView.swift in Sources */,
 				51A56AF1211553EC007F6718 /* AppDelegate.swift in Sources */,
 			);
