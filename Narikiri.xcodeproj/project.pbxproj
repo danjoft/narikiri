@@ -11,6 +11,7 @@
 		510072B4211AC61F00604E85 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072B3211AC61F00604E85 /* ChatMessage.swift */; };
 		510072B6211AC6B500604E85 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072B5211AC6B500604E85 /* ChatRoom.swift */; };
 		510072C3211AD8C900604E85 /* ChatModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072C2211AD8C900604E85 /* ChatModelsTests.swift */; };
+		510072C5211AE16E00604E85 /* ChatTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072C4211AE16E00604E85 /* ChatTableViewCellModel.swift */; };
 		515F451421155E2C000E9BD9 /* BalloonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515F451321155E2C000E9BD9 /* BalloonContainer.swift */; };
 		515F451521155E2C000E9BD9 /* BalloonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515F451321155E2C000E9BD9 /* BalloonContainer.swift */; };
 		515F451621155E2C000E9BD9 /* BalloonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515F451321155E2C000E9BD9 /* BalloonContainer.swift */; };
@@ -57,6 +58,7 @@
 		510072B3211AC61F00604E85 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		510072B5211AC6B500604E85 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		510072C2211AD8C900604E85 /* ChatModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModelsTests.swift; sourceTree = "<group>"; };
+		510072C4211AE16E00604E85 /* ChatTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCellModel.swift; sourceTree = "<group>"; };
 		515F451321155E2C000E9BD9 /* BalloonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonContainer.swift; sourceTree = "<group>"; };
 		515F451721155F16000E9BD9 /* CommonUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIView.swift; sourceTree = "<group>"; };
 		515F451C21156B74000E9BD9 /* BalloonContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalloonContainer.xib; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			children = (
 				51E8AFC821197FCC0044C80B /* ChatTableViewCell.swift */,
 				51E8AFC921197FCC0044C80B /* ChatTableViewCell.xib */,
+				510072C4211AE16E00604E85 /* ChatTableViewCellModel.swift */,
 			);
 			path = chat;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				510072B4211AC61F00604E85 /* ChatMessage.swift in Sources */,
+				510072C5211AE16E00604E85 /* ChatTableViewCellModel.swift in Sources */,
 				51A56AF9211553EC007F6718 /* Narikiri.xcdatamodeld in Sources */,
 				515F451421155E2C000E9BD9 /* BalloonContainer.swift in Sources */,
 				51E8AFB521171ABC0044C80B /* TextBalloon.swift in Sources */,
