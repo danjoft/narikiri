@@ -101,6 +101,7 @@
 		515F450E211559FD000E9BD9 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				51E8AFB7211924130044C80B /* chat */,
 				51E8AFAF2115BAF30044C80B /* const */,
 				515F451C21156B74000E9BD9 /* BalloonContainer.xib */,
 				515F451321155E2C000E9BD9 /* BalloonContainer.swift */,
@@ -132,8 +133,6 @@
 		51A56AEF211553EC007F6718 /* Narikiri */ = {
 			isa = PBXGroup;
 			children = (
-				51E8AFCC211ABBEE0044C80B /* New Group */,
-				51E8AFB7211924130044C80B /* chat */,
 				51E8AFAD21157BE10044C80B /* common */,
 				515F450E211559FD000E9BD9 /* ui */,
 				51A56AF0211553EC007F6718 /* AppDelegate.swift */,
@@ -197,13 +196,6 @@
 				51E8AFC921197FCC0044C80B /* ChatTableViewCell.xib */,
 			);
 			path = chat;
-			sourceTree = "<group>";
-		};
-		51E8AFCC211ABBEE0044C80B /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
