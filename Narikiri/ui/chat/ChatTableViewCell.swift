@@ -16,6 +16,7 @@ class ChatTableViewCell: UITableViewCell, CommonUIView {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.initNib()
 
+        // for delete xib temporary background
         rootView.backgroundColor = .clear
         balloonLayer.backgroundColor = .clear
 
