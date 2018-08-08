@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510072B2211AC5D300604E85 /* ChatChara.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072B1211AC5D300604E85 /* ChatChara.swift */; };
+		510072B4211AC61F00604E85 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072B3211AC61F00604E85 /* ChatMessage.swift */; };
+		510072B6211AC6B500604E85 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072B5211AC6B500604E85 /* ChatRoom.swift */; };
+		510072C3211AD8C900604E85 /* ChatModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072C2211AD8C900604E85 /* ChatModelsTests.swift */; };
 		515F451421155E2C000E9BD9 /* BalloonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515F451321155E2C000E9BD9 /* BalloonContainer.swift */; };
 		515F451521155E2C000E9BD9 /* BalloonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515F451321155E2C000E9BD9 /* BalloonContainer.swift */; };
 		515F451621155E2C000E9BD9 /* BalloonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515F451321155E2C000E9BD9 /* BalloonContainer.swift */; };
@@ -49,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		510072B1211AC5D300604E85 /* ChatChara.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatChara.swift; sourceTree = "<group>"; };
+		510072B3211AC61F00604E85 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		510072B5211AC6B500604E85 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
+		510072C2211AD8C900604E85 /* ChatModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModelsTests.swift; sourceTree = "<group>"; };
 		515F451321155E2C000E9BD9 /* BalloonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonContainer.swift; sourceTree = "<group>"; };
 		515F451721155F16000E9BD9 /* CommonUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIView.swift; sourceTree = "<group>"; };
 		515F451C21156B74000E9BD9 /* BalloonContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalloonContainer.xib; sourceTree = "<group>"; };
@@ -98,6 +106,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		510072B0211AC5AF00604E85 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				510072BE211AD33800604E85 /* chat */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		510072BE211AD33800604E85 /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				510072B1211AC5D300604E85 /* ChatChara.swift */,
+				510072B3211AC61F00604E85 /* ChatMessage.swift */,
+				510072B5211AC6B500604E85 /* ChatRoom.swift */,
+			);
+			path = chat;
+			sourceTree = "<group>";
+		};
 		515F450E211559FD000E9BD9 /* ui */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +159,7 @@
 		51A56AEF211553EC007F6718 /* Narikiri */ = {
 			isa = PBXGroup;
 			children = (
+				510072B0211AC5AF00604E85 /* model */,
 				51E8AFAD21157BE10044C80B /* common */,
 				515F450E211559FD000E9BD9 /* ui */,
 				51A56AF0211553EC007F6718 /* AppDelegate.swift */,
@@ -153,6 +180,7 @@
 				51A56B08211553ED007F6718 /* NarikiriTests.swift */,
 				51A56B0A211553ED007F6718 /* Info.plist */,
 				51E8AFB22116FFBC0044C80B /* BalloonContainerTests.swift */,
+				510072C2211AD8C900604E85 /* ChatModelsTests.swift */,
 			);
 			path = NarikiriTests;
 			sourceTree = "<group>";
@@ -333,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				510072B4211AC61F00604E85 /* ChatMessage.swift in Sources */,
 				51A56AF9211553EC007F6718 /* Narikiri.xcdatamodeld in Sources */,
 				515F451421155E2C000E9BD9 /* BalloonContainer.swift in Sources */,
 				51E8AFB521171ABC0044C80B /* TextBalloon.swift in Sources */,
@@ -340,6 +369,8 @@
 				51E8AFCA21197FCC0044C80B /* ChatTableViewCell.swift in Sources */,
 				515F451821155F16000E9BD9 /* CommonUIView.swift in Sources */,
 				51A56AF1211553EC007F6718 /* AppDelegate.swift in Sources */,
+				510072B6211AC6B500604E85 /* ChatRoom.swift in Sources */,
+				510072B2211AC5D300604E85 /* ChatChara.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +383,7 @@
 				515F451521155E2C000E9BD9 /* BalloonContainer.swift in Sources */,
 				51E8AFB32116FFBC0044C80B /* BalloonContainerTests.swift in Sources */,
 				51E8AFB12116FC1D0044C80B /* CommonUIViewTests.swift in Sources */,
+				510072C3211AD8C900604E85 /* ChatModelsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
