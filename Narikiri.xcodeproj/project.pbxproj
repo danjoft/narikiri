@@ -12,6 +12,12 @@
 		510072B6211AC6B500604E85 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072B5211AC6B500604E85 /* ChatRoom.swift */; };
 		510072C3211AD8C900604E85 /* ChatModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072C2211AD8C900604E85 /* ChatModelsTests.swift */; };
 		510072C5211AE16E00604E85 /* ChatTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072C4211AE16E00604E85 /* ChatTableViewCellModel.swift */; };
+		510072C7211B0CF000604E85 /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072C6211B0CF000604E85 /* ChatTableViewController.swift */; };
+		510072C9211B17BD00604E85 /* ChatTableViewCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072C8211B17BD00604E85 /* ChatTableViewCellType.swift */; };
+		510072CC211B277B00604E85 /* DebugChatRoomFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072CB211B277B00604E85 /* DebugChatRoomFactory.swift */; };
+		510072CE211BB6EB00604E85 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072CD211BB6EB00604E85 /* ThemeColor.swift */; };
+		510072D4211BD70300604E85 /* TextBalloonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072D3211BD70300604E85 /* TextBalloonTests.swift */; };
+		51107C07211BDD1100D0E948 /* ChatTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51107C06211BDD1100D0E948 /* ChatTableTests.swift */; };
 		515F451421155E2C000E9BD9 /* BalloonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515F451321155E2C000E9BD9 /* BalloonContainer.swift */; };
 		515F451521155E2C000E9BD9 /* BalloonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515F451321155E2C000E9BD9 /* BalloonContainer.swift */; };
 		515F451621155E2C000E9BD9 /* BalloonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515F451321155E2C000E9BD9 /* BalloonContainer.swift */; };
@@ -59,6 +65,12 @@
 		510072B5211AC6B500604E85 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		510072C2211AD8C900604E85 /* ChatModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModelsTests.swift; sourceTree = "<group>"; };
 		510072C4211AE16E00604E85 /* ChatTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCellModel.swift; sourceTree = "<group>"; };
+		510072C6211B0CF000604E85 /* ChatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
+		510072C8211B17BD00604E85 /* ChatTableViewCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCellType.swift; sourceTree = "<group>"; };
+		510072CB211B277B00604E85 /* DebugChatRoomFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugChatRoomFactory.swift; sourceTree = "<group>"; };
+		510072CD211BB6EB00604E85 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		510072D3211BD70300604E85 /* TextBalloonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBalloonTests.swift; sourceTree = "<group>"; };
+		51107C06211BDD1100D0E948 /* ChatTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableTests.swift; sourceTree = "<group>"; };
 		515F451321155E2C000E9BD9 /* BalloonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonContainer.swift; sourceTree = "<group>"; };
 		515F451721155F16000E9BD9 /* CommonUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIView.swift; sourceTree = "<group>"; };
 		515F451C21156B74000E9BD9 /* BalloonContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalloonContainer.xib; sourceTree = "<group>"; };
@@ -126,6 +138,14 @@
 			path = chat;
 			sourceTree = "<group>";
 		};
+		510072CA211B275800604E85 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				510072CB211B277B00604E85 /* DebugChatRoomFactory.swift */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
 		515F450E211559FD000E9BD9 /* ui */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +181,7 @@
 		51A56AEF211553EC007F6718 /* Narikiri */ = {
 			isa = PBXGroup;
 			children = (
+				510072CA211B275800604E85 /* debug */,
 				510072B0211AC5AF00604E85 /* model */,
 				51E8AFAD21157BE10044C80B /* common */,
 				515F450E211559FD000E9BD9 /* ui */,
@@ -183,6 +204,8 @@
 				51A56B0A211553ED007F6718 /* Info.plist */,
 				51E8AFB22116FFBC0044C80B /* BalloonContainerTests.swift */,
 				510072C2211AD8C900604E85 /* ChatModelsTests.swift */,
+				510072D3211BD70300604E85 /* TextBalloonTests.swift */,
+				51107C06211BDD1100D0E948 /* ChatTableTests.swift */,
 			);
 			path = NarikiriTests;
 			sourceTree = "<group>";
@@ -215,6 +238,7 @@
 		51E8AFAF2115BAF30044C80B /* const */ = {
 			isa = PBXGroup;
 			children = (
+				510072CD211BB6EB00604E85 /* ThemeColor.swift */,
 			);
 			path = const;
 			sourceTree = "<group>";
@@ -225,6 +249,8 @@
 				51E8AFC821197FCC0044C80B /* ChatTableViewCell.swift */,
 				51E8AFC921197FCC0044C80B /* ChatTableViewCell.xib */,
 				510072C4211AE16E00604E85 /* ChatTableViewCellModel.swift */,
+				510072C6211B0CF000604E85 /* ChatTableViewController.swift */,
+				510072C8211B17BD00604E85 /* ChatTableViewCellType.swift */,
 			);
 			path = chat;
 			sourceTree = "<group>";
@@ -369,12 +395,16 @@
 				51A56AF9211553EC007F6718 /* Narikiri.xcdatamodeld in Sources */,
 				515F451421155E2C000E9BD9 /* BalloonContainer.swift in Sources */,
 				51E8AFB521171ABC0044C80B /* TextBalloon.swift in Sources */,
+				510072CC211B277B00604E85 /* DebugChatRoomFactory.swift in Sources */,
 				51A56AF3211553EC007F6718 /* ViewController.swift in Sources */,
 				51E8AFCA21197FCC0044C80B /* ChatTableViewCell.swift in Sources */,
 				515F451821155F16000E9BD9 /* CommonUIView.swift in Sources */,
 				51A56AF1211553EC007F6718 /* AppDelegate.swift in Sources */,
 				510072B6211AC6B500604E85 /* ChatRoom.swift in Sources */,
+				510072C9211B17BD00604E85 /* ChatTableViewCellType.swift in Sources */,
 				510072B2211AC5D300604E85 /* ChatChara.swift in Sources */,
+				510072C7211B0CF000604E85 /* ChatTableViewController.swift in Sources */,
+				510072CE211BB6EB00604E85 /* ThemeColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,9 +414,11 @@
 			files = (
 				51A56B09211553ED007F6718 /* NarikiriTests.swift in Sources */,
 				515F451921155F16000E9BD9 /* CommonUIView.swift in Sources */,
+				51107C07211BDD1100D0E948 /* ChatTableTests.swift in Sources */,
 				515F451521155E2C000E9BD9 /* BalloonContainer.swift in Sources */,
 				51E8AFB32116FFBC0044C80B /* BalloonContainerTests.swift in Sources */,
 				51E8AFB12116FC1D0044C80B /* CommonUIViewTests.swift in Sources */,
+				510072D4211BD70300604E85 /* TextBalloonTests.swift in Sources */,
 				510072C3211AD8C900604E85 /* ChatModelsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

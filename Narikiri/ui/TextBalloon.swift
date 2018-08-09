@@ -40,13 +40,23 @@ class TextBalloon: UIView, CommonUIView {
         }
     }
 
+    var balloonColor: UIColor? {
+        get {
+            return _container.balloonColor
+        }
+        set {
+            _container.balloonColor = newValue
+        }
+    }
+
     private func updateView() {
         _label.text = _text
         _label.numberOfLines = 0
-        _label.bounds = CGRect(x: 0, y: 0,
-                               width: maxWidth - _container.margin * 2,
-                               height: maxHeight - _container.margin * 2)
-        _label.sizeToFit()
+        _label.frame = CGRect(
+            origin: _label.frame.origin,
+            size:   _label.sizeThatFits(CGSize(width:  maxWidth - _container.margin * 2,
+                                               height: maxHeight - _container.margin * 2))
+        )
         _container.content = _label
         frame(size: _container.frame.size)
     }

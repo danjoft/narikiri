@@ -74,11 +74,31 @@ class BalloonContainerTests: XCTestCase {
         )
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testSizeAfterContentAfterContentReAssigining() {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.text = "a"
+        label.sizeToFit()
+        let balloonContainer = BalloonContainer(content: label)
+        let sizeOfOneLine = balloonContainer.bounds
+
+        label.text = "a\na\na"
+        label.sizeToFit()
+        balloonContainer.content = label
+        let sizeOfThreeLines = balloonContainer.bounds
+
+        label.text = "a\na"
+        label.sizeToFit()
+        balloonContainer.content = label
+        let sizeOfTwoLines = balloonContainer.bounds
+
+        XCTAssertTrue(sizeOfOneLine.height < sizeOfTwoLines.height)
+        XCTAssertTrue(sizeOfTwoLines.height < sizeOfThreeLines.height)
+
+        XCTAssertEqual(sizeOfOneLine.width, sizeOfTwoLines.width)
+        XCTAssertEqual(sizeOfTwoLines.width, sizeOfThreeLines.width
+
+        )
     }
 
 }
