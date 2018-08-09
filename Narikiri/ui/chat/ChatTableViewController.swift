@@ -1,5 +1,3 @@
-//
-
 import UIKit
 
 class ChatTableViewController: UIViewController {
@@ -7,7 +5,9 @@ class ChatTableViewController: UIViewController {
     var tableView: UITableView!
 
     var _cellModels: [ChatTableViewCellModel] = []
-    fileprivate let _cellHeightCache: _CellHeightCache = _CellHeightCache()
+    private let _cellSizeCache = ViewSizeCalculateCache<ChatTableViewCell, ChatTableViewCellModel>(updateViewWithData: { (view, viewModel) in
+        view.model = viewModel
+    })
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,8 +73,8 @@ extension ChatTableViewController : UITableViewDelegate {
 
     private func _getHeight(forRowAt indexPath: IndexPath) -> CGFloat {
         let cellModel = _cellModels[indexPath.row]
-        let height = _cellHeightCache.getHeight(model: cellModel, cacheKey: cellModel.chatMessageId)
-        return height
+        let frame = _cellSizeCache.getFrame(model: cellModel, cacheKey: String(cellModel.chatMessageId))
+        return frame.size.height
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -84,32 +84,5 @@ extension ChatTableViewController : UITableViewDelegate {
         cell.layoutIfNeeded()
 
         return cell
-    }
-}
-
-fileprivate class _CellHeightCache {
-    private var _cellTemplate: ChatTableViewCell
-    private var _heightMap: [Int: CGFloat] = [:]
-
-    init() {
-        _cellTemplate = ChatTableViewCell(style: .default, reuseIdentifier: "dummy")
-    }
-
-    func getHeight(model: ChatTableViewCellModel, cacheKey: Int) -> CGFloat {
-        if let cachedHeight = _heightMap[cacheKey] {
-            return cachedHeight
-        }
-        _setViewModelToView(viewModel: model)
-        let height = _cellTemplate.bounds.height
-        _heightMap[cacheKey] = height
-        return height
-    }
-
-    func clear() {
-        _heightMap = [:]
-    }
-
-    func _setViewModelToView(viewModel: ChatTableViewCellModel) {
-        _cellTemplate.model = viewModel
     }
 }
