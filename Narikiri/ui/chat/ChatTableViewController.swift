@@ -9,6 +9,16 @@ class ChatTableViewController: UIViewController {
         view.model = viewModel
     })
 
+    var cellModels: [ChatTableViewCellModel] {
+        get {
+            return _cellModels
+        }
+        set {
+            _cellModels = newValue
+            tableView.reloadData()
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,12 +35,6 @@ class ChatTableViewController: UIViewController {
 
         // Hack to avoid showing no-cell table view
         tableView.tableFooterView = UIView(frame: .zero)
-
-        let factory = DebugChatRoomFactory()
-        let messages = factory.messages(number: 20, charas: factory.charas(number: 3))
-        _cellModels = messages.map { (message) -> ChatTableViewCellModel in
-            return _ChatTableViewCellModelImpl(message: message )
-        }
 
         tableView.delegate = self
         tableView.dataSource = self
