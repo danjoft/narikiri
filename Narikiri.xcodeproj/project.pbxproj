@@ -122,6 +122,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51000EFE211C7DD800138AEE /* table */ = {
+			isa = PBXGroup;
+			children = (
+				51E8AFC821197FCC0044C80B /* ChatTableViewCell.swift */,
+				51E8AFC921197FCC0044C80B /* ChatTableViewCell.xib */,
+				510072C4211AE16E00604E85 /* ChatTableViewCellModel.swift */,
+				510072C6211B0CF000604E85 /* ChatTableViewController.swift */,
+				510072C8211B17BD00604E85 /* ChatTableViewCellType.swift */,
+			);
+			path = table;
+			sourceTree = "<group>";
+		};
 		510072B0211AC5AF00604E85 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,11 +261,7 @@
 		51E8AFB7211924130044C80B /* chat */ = {
 			isa = PBXGroup;
 			children = (
-				51E8AFC821197FCC0044C80B /* ChatTableViewCell.swift */,
-				51E8AFC921197FCC0044C80B /* ChatTableViewCell.xib */,
-				510072C4211AE16E00604E85 /* ChatTableViewCellModel.swift */,
-				510072C6211B0CF000604E85 /* ChatTableViewController.swift */,
-				510072C8211B17BD00604E85 /* ChatTableViewCellType.swift */,
+				51000EFE211C7DD800138AEE /* table */,
 			);
 			path = chat;
 			sourceTree = "<group>";
