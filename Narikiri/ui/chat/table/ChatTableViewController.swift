@@ -50,6 +50,11 @@ class ChatTableViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.frame
+    }
 }
 
 extension ChatTableViewController : UITableViewDataSource {

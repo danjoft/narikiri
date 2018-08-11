@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		51000EFD211C68DD00138AEE /* ViewSizeCalculateCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51000EFC211C68DD00138AEE /* ViewSizeCalculateCache.swift */; };
+		51000F03211D294100138AEE /* ChatInputBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51000F02211D294100138AEE /* ChatInputBar.xib */; };
+		51000F05211D29AD00138AEE /* ChatInputBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51000F04211D29AD00138AEE /* ChatInputBar.swift */; };
+		51000F07211D3A4800138AEE /* ChatInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51000F06211D3A4800138AEE /* ChatInputViewController.swift */; };
+		51000F0C211D536D00138AEE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51000F0A211D536D00138AEE /* ChatViewController.swift */; };
+		51000F0D211D536D00138AEE /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51000F0B211D536D00138AEE /* ChatViewController.xib */; };
 		510072B2211AC5D300604E85 /* ChatChara.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072B1211AC5D300604E85 /* ChatChara.swift */; };
 		510072B4211AC61F00604E85 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072B3211AC61F00604E85 /* ChatMessage.swift */; };
 		510072B6211AC6B500604E85 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072B5211AC6B500604E85 /* ChatRoom.swift */; };
@@ -28,6 +33,7 @@
 		515F451D21156B74000E9BD9 /* BalloonContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515F451C21156B74000E9BD9 /* BalloonContainer.xib */; };
 		515F451E21156B74000E9BD9 /* BalloonContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515F451C21156B74000E9BD9 /* BalloonContainer.xib */; };
 		515F451F21156B74000E9BD9 /* BalloonContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515F451C21156B74000E9BD9 /* BalloonContainer.xib */; };
+		518571E5211D5F6C004BD205 /* KeyboardFrameObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518571E4211D5F6C004BD205 /* KeyboardFrameObserver.swift */; };
 		51A56AF1211553EC007F6718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A56AF0211553EC007F6718 /* AppDelegate.swift */; };
 		51A56AF3211553EC007F6718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A56AF2211553EC007F6718 /* ViewController.swift */; };
 		51A56AF6211553EC007F6718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A56AF4211553EC007F6718 /* Main.storyboard */; };
@@ -62,6 +68,11 @@
 
 /* Begin PBXFileReference section */
 		51000EFC211C68DD00138AEE /* ViewSizeCalculateCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSizeCalculateCache.swift; sourceTree = "<group>"; };
+		51000F02211D294100138AEE /* ChatInputBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatInputBar.xib; sourceTree = "<group>"; };
+		51000F04211D29AD00138AEE /* ChatInputBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputBar.swift; sourceTree = "<group>"; };
+		51000F06211D3A4800138AEE /* ChatInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputViewController.swift; sourceTree = "<group>"; };
+		51000F0A211D536D00138AEE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		51000F0B211D536D00138AEE /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		510072B1211AC5D300604E85 /* ChatChara.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatChara.swift; sourceTree = "<group>"; };
 		510072B3211AC61F00604E85 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		510072B5211AC6B500604E85 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
@@ -76,6 +87,7 @@
 		515F451321155E2C000E9BD9 /* BalloonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonContainer.swift; sourceTree = "<group>"; };
 		515F451721155F16000E9BD9 /* CommonUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIView.swift; sourceTree = "<group>"; };
 		515F451C21156B74000E9BD9 /* BalloonContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalloonContainer.xib; sourceTree = "<group>"; };
+		518571E4211D5F6C004BD205 /* KeyboardFrameObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameObserver.swift; sourceTree = "<group>"; };
 		51A56AED211553EC007F6718 /* Narikiri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Narikiri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A56AF0211553EC007F6718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51A56AF2211553EC007F6718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +144,16 @@
 				510072C8211B17BD00604E85 /* ChatTableViewCellType.swift */,
 			);
 			path = table;
+			sourceTree = "<group>";
+		};
+		51000EFF211C7E6F00138AEE /* input */ = {
+			isa = PBXGroup;
+			children = (
+				51000F02211D294100138AEE /* ChatInputBar.xib */,
+				51000F04211D29AD00138AEE /* ChatInputBar.swift */,
+				51000F06211D3A4800138AEE /* ChatInputViewController.swift */,
+			);
+			path = input;
 			sourceTree = "<group>";
 		};
 		510072B0211AC5AF00604E85 /* model */ = {
@@ -246,6 +268,7 @@
 			children = (
 				515F451721155F16000E9BD9 /* CommonUIView.swift */,
 				51000EFC211C68DD00138AEE /* ViewSizeCalculateCache.swift */,
+				518571E4211D5F6C004BD205 /* KeyboardFrameObserver.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -261,7 +284,10 @@
 		51E8AFB7211924130044C80B /* chat */ = {
 			isa = PBXGroup;
 			children = (
+				51000EFF211C7E6F00138AEE /* input */,
 				51000EFE211C7DD800138AEE /* table */,
+				51000F0A211D536D00138AEE /* ChatViewController.swift */,
+				51000F0B211D536D00138AEE /* ChatViewController.xib */,
 			);
 			path = chat;
 			sourceTree = "<group>";
@@ -372,7 +398,9 @@
 			files = (
 				51A56AFE211553ED007F6718 /* LaunchScreen.storyboard in Resources */,
 				51A56AFB211553ED007F6718 /* Assets.xcassets in Resources */,
+				51000F0D211D536D00138AEE /* ChatViewController.xib in Resources */,
 				51E8AFCB21197FCC0044C80B /* ChatTableViewCell.xib in Resources */,
+				51000F03211D294100138AEE /* ChatInputBar.xib in Resources */,
 				51A56AF6211553EC007F6718 /* Main.storyboard in Resources */,
 				515F451D21156B74000E9BD9 /* BalloonContainer.xib in Resources */,
 			);
@@ -403,6 +431,7 @@
 			files = (
 				510072B4211AC61F00604E85 /* ChatMessage.swift in Sources */,
 				510072C5211AE16E00604E85 /* ChatTableViewCellModel.swift in Sources */,
+				518571E5211D5F6C004BD205 /* KeyboardFrameObserver.swift in Sources */,
 				51A56AF9211553EC007F6718 /* Narikiri.xcdatamodeld in Sources */,
 				515F451421155E2C000E9BD9 /* BalloonContainer.swift in Sources */,
 				51E8AFB521171ABC0044C80B /* TextBalloon.swift in Sources */,
@@ -412,11 +441,14 @@
 				515F451821155F16000E9BD9 /* CommonUIView.swift in Sources */,
 				51A56AF1211553EC007F6718 /* AppDelegate.swift in Sources */,
 				510072B6211AC6B500604E85 /* ChatRoom.swift in Sources */,
+				51000F0C211D536D00138AEE /* ChatViewController.swift in Sources */,
 				510072C9211B17BD00604E85 /* ChatTableViewCellType.swift in Sources */,
 				510072B2211AC5D300604E85 /* ChatChara.swift in Sources */,
+				51000F07211D3A4800138AEE /* ChatInputViewController.swift in Sources */,
 				510072C7211B0CF000604E85 /* ChatTableViewController.swift in Sources */,
 				510072CE211BB6EB00604E85 /* ThemeColor.swift in Sources */,
 				51000EFD211C68DD00138AEE /* ViewSizeCalculateCache.swift in Sources */,
+				51000F05211D29AD00138AEE /* ChatInputBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
