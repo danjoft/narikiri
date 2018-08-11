@@ -51,9 +51,7 @@ class ChatTableViewCell: UITableViewCell, CommonUIView {
     func updateView() {
         userName.text = _model.charaNickname
 
-        userName.frame = CGRect(
-            origin: userName.frame.origin,
-            size: userName.sizeThatFits(subviewMaxSize))
+        userName.frame.size = userName.sizeThatFits(subviewMaxSize)
         // Must use .sizeThatFits(_) here instead of .sizeToFit(),
         // it is because... the size of userName is needed below,
         // but wouldn't be able to take the accurate size if you just use .sizeToFit() here.
@@ -64,15 +62,10 @@ class ChatTableViewCell: UITableViewCell, CommonUIView {
                                     y: userName.bounds.height + interMargin,
                                     width: bounds.width - frameMargin * 2,
                                     height: balloon.bounds.height)
-        frame = CGRect(
-            origin: frame.origin,
-            size: CGSize(
-                width: bounds.width,
-                height: balloonLayer.frame.maxY + frameMargin
-            )
+        frame.size = CGSize(
+            width: bounds.width,
+            height: balloonLayer.frame.maxY + frameMargin
         )
-
-        setNeedsLayout()
     }
 
     required init?(coder aDecoder: NSCoder) {

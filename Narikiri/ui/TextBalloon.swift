@@ -9,12 +9,12 @@ class TextBalloon: UIView, CommonUIView {
     var maxHeight: CGFloat
 
     init(text: String, maxWidth: CGFloat = 200.0, maxHeight: CGFloat = 2000.0) {
-        self._label = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        self._label = UILabel(frame: .zero)
         self._text  = text
         self._container = BalloonContainer(content: _label)
         self.maxWidth  = maxWidth
         self.maxHeight = maxHeight
-        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        super.init(frame: .zero)
 
         self._container.addSubview(_label)
         self.addSubview(_container)
@@ -52,12 +52,10 @@ class TextBalloon: UIView, CommonUIView {
     private func updateView() {
         _label.text = _text
         _label.numberOfLines = 0
-        _label.frame = CGRect(
-            origin: _label.frame.origin,
-            size:   _label.sizeThatFits(CGSize(width:  maxWidth - _container.margin * 2,
-                                               height: maxHeight - _container.margin * 2))
-        )
+        _label.frame.size = _label.sizeThatFits(CGSize(
+            width:  maxWidth - _container.margin * 2,
+            height: maxHeight - _container.margin * 2))
         _container.content = _label
-        frame(size: _container.frame.size)
+        frame.size = _container.frame.size
     }
 }

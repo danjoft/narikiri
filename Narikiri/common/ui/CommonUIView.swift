@@ -14,22 +14,6 @@ extension CommonUIView where Self : UIView {
 
         self.addSubview(nibRoot)
     }
-
-    // Change only the origin of frame
-    func frame(origin: CGPoint) {
-        self.frame = CGRect(
-            origin: origin,
-            size: self.frame.size
-        )
-    }
-
-    // Change only the size of frame
-    func frame(size: CGSize) {
-        self.frame = CGRect(
-            origin: self.frame.origin,
-            size: size
-        )
-    }
 }
 
 extension UIView {

@@ -53,19 +53,17 @@ class BalloonContainer: UIView, CommonUIView {
             subview.removeFromSuperview()
         }
         self.contentArea.addSubview(self._content)
-        self._content.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: _content.bounds.size)
+        self._content.frame.size = _content.bounds.size
         let margin = self.margin
         self.contentArea.frame = CGRect(origin: CGPoint(x: margin, y: margin),
-                                         size: _content.bounds.size)
-        self.background.frame = CGRect(x: 0, y: 0,
-                                       width: contentArea.bounds.size.width + margin * 2,
-                                       height: contentArea.bounds.size.height + margin * 2)
+                                        size: _content.bounds.size)
+        self.background.frame.size = CGSize(
+            width: contentArea.bounds.size.width + margin * 2,
+            height: contentArea.bounds.size.height + margin * 2)
         self.contentArea.backgroundColor = nil
-        self.frame(size:
-            CGSize(
-                width:  self.background.bounds.width,
-                height: self.background.bounds.height
-            )
+        self.frame.size = CGSize(
+            width:  self.background.bounds.width,
+            height: self.background.bounds.height
         )
     }
 }

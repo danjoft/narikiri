@@ -17,7 +17,7 @@ class CommonUIViewTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let view = _CommonUIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        view.frame(origin: CGPoint(x: 10, y: 10))
+        view.frame.origin = CGPoint(x: 10, y: 10)
 
         XCTAssertEqual(view.frame, CGRect(x: 10, y: 10, width: 100, height: 100))
     }
