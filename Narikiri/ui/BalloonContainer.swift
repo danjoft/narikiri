@@ -15,30 +15,31 @@ class BalloonContainer: UIView, CommonUIView {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        self.initNib()
     }
 
     convenience init(content: UIView) {
-        self.init(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        self.init(frame: .zero)
         self.content = content
     }
 
     var content: UIView {
         set {
-            self._content = newValue
-            self.updateView()
+            _content = newValue
+            updateView()
         }
         get {
-            return self._content
+            return _content
         }
     }
 
     var balloonColor: UIColor? {
         set {
-            self.background.backgroundColor = newValue
+            background.backgroundColor = newValue
         }
         get {
-            return self.background.backgroundColor
+            return background.backgroundColor
         }
     }
 
@@ -49,21 +50,23 @@ class BalloonContainer: UIView, CommonUIView {
     }
 
     private func updateView() {
-        for subview in self.contentArea.subviews {
+        for subview in contentArea.subviews {
             subview.removeFromSuperview()
         }
-        self.contentArea.addSubview(self._content)
-        self._content.frame.size = _content.bounds.size
+        contentArea.addSubview(_content)
+        _content.frame.size = _content.bounds.size
         let margin = self.margin
-        self.contentArea.frame = CGRect(origin: CGPoint(x: margin, y: margin),
-                                        size: _content.bounds.size)
-        self.background.frame.size = CGSize(
+        contentArea.frame = CGRect(origin: CGPoint(x: margin, y: margin),
+                                   size: _content.bounds.size)
+        background.frame.size = CGSize(
             width: contentArea.bounds.size.width + margin * 2,
             height: contentArea.bounds.size.height + margin * 2)
-        self.contentArea.backgroundColor = nil
-        self.frame.size = CGSize(
-            width:  self.background.bounds.width,
-            height: self.background.bounds.height
-        )
+        contentArea.backgroundColor = nil
+
+        self.frame.size = background.bounds.size
+        // if you change self.bounds.size here, the frame.origin automatically
+        // gets changed with keeping center position.
+        // (When the bounds size is changed, frame.origin gets automatically
+        //  changed so as to keep center position)
     }
 }

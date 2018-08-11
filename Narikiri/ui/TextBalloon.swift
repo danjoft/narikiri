@@ -9,17 +9,18 @@ class TextBalloon: UIView, CommonUIView {
     var maxHeight: CGFloat
 
     init(text: String, maxWidth: CGFloat = 200.0, maxHeight: CGFloat = 2000.0) {
-        self._label = UILabel(frame: .zero)
-        self._text  = text
-        self._container = BalloonContainer(content: _label)
+        _label = UILabel(frame: .zero)
+        _text  = text
+        _container = BalloonContainer(content: _label)
         self.maxWidth  = maxWidth
         self.maxHeight = maxHeight
+
         super.init(frame: .zero)
 
-        self._container.addSubview(_label)
-        self.addSubview(_container)
+        _container.addSubview(_label)
+        addSubview(_container)
         
-        self.updateView()
+        updateView()
     }
 
     convenience init(maxWidth: CGFloat = 200.0, maxHeight: CGFloat = 2000.0) {
@@ -56,6 +57,6 @@ class TextBalloon: UIView, CommonUIView {
             width:  maxWidth - _container.margin * 2,
             height: maxHeight - _container.margin * 2))
         _container.content = _label
-        frame.size = _container.frame.size
+        self.frame.size = _container.frame.size
     }
 }

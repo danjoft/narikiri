@@ -62,7 +62,7 @@ class ChatTableViewCell: UITableViewCell, CommonUIView {
                                     y: userName.bounds.height + interMargin,
                                     width: bounds.width - frameMargin * 2,
                                     height: balloon.bounds.height)
-        frame.size = CGSize(
+        self.frame.size = CGSize(
             width: bounds.width,
             height: balloonLayer.frame.maxY + frameMargin
         )
