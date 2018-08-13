@@ -32,4 +32,10 @@ class ChatInputBar: UIView, CommonUIView {
             _inputField.delegate = newValue
         }
     }
+
+    var height: CGFloat {
+        get {
+            return 45.0
+        }
+    }
 }

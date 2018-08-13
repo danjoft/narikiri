@@ -7,6 +7,7 @@ import UIKit
 //   keyboardObserver.delegate = self // self: KeyboardFrameObserverDelegate
 class KeyboardFrameObserver {
     weak var delegate: KeyboardFrameObserverDelegate?
+    var _lastHeight: CGFloat = 0
 
     init() {
         let notification = NotificationCenter.default
@@ -27,11 +28,19 @@ class KeyboardFrameObserver {
         let userInfo = (notification as NSNotification).userInfo!
         let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         delegate?.keyboardDidChangeFrame(frame: keyboardFrame)
+
+        let newHeight = keyboardFrame.minY - UIScreen.main.bounds.maxY
+        let heightDiff = newHeight - _lastHeight
+        _lastHeight = newHeight
+        delegate?.keyboardHeightDifferential(heightDifferential: heightDiff)
+
     }
     @objc func _willShow(_ notification: Notification) {
+        _lastHeight = 0.0
         delegate?.keyboardWillShow()
     }
     @objc func _didHide(_ notification: Notification) {
+        _lastHeight = 0.0
         delegate?.keyboardDidHide()
     }
 }
@@ -42,4 +51,5 @@ protocol KeyboardFrameObserverDelegate : class {
     func keyboardDidChangeFrame(frame: CGRect)
     func keyboardWillShow()
     func keyboardDidHide()
+    func keyboardHeightDifferential(heightDifferential: CGFloat)
 }

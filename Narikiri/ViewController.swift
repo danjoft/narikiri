@@ -12,8 +12,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         _chatViewController = ChatViewController()
+        addChildViewController(_chatViewController)
         view.addSubview(_chatViewController.view)
-
+        _chatViewController.didMove(toParentViewController: self)
 
 
         _secTimer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] (timer: Timer) in

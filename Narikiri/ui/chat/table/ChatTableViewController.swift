@@ -3,6 +3,7 @@ import UIKit
 class ChatTableViewController: UIViewController {
 
     var tableView: UITableView!
+    var delegate: ChatTableViewControllerDelegate?
 
     var _cellModels: [ChatTableViewCellModel] = []
     private let _cellSizeCache = ViewSizeCalculateCache<ChatTableViewCell, ChatTableViewCellModel>(updateViewWithData: { (view, viewModel) in
@@ -40,6 +41,11 @@ class ChatTableViewController: UIViewController {
         tableView.dataSource = self
 
         view.addSubview(tableView)
+
+        let tapGesture = UITapGestureRecognizer(
+            target: self,
+            action: #selector(ChatTableViewController._onTapped(_:)))
+        self.view.addGestureRecognizer(tapGesture)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -54,6 +60,15 @@ class ChatTableViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.frame
+    }
+
+    @objc func _onTapped(_ sender: UIGestureRecognizer) {
+        delegate?.onChatTableViewActivated()
+    }
+
+    func changeScrollOffset(diffY: CGFloat) {
+        tableView.contentOffset = CGRect(origin: tableView.contentOffset, size: .zero)
+            .offsetBy(dx: 0, dy: -diffY).origin
     }
 }
 
@@ -94,4 +109,8 @@ extension ChatTableViewController : UITableViewDelegate {
 
         return cell
     }
+}
+
+protocol ChatTableViewControllerDelegate {
+    func onChatTableViewActivated()
 }

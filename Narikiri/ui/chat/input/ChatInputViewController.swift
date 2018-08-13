@@ -6,6 +6,13 @@ class ChatInputViewController: UIViewController {
 
     private var _inputBar: ChatInputBar!
 
+    // Should refer after viewDidLoad (means after .view was refered)
+    var barHeight: CGFloat {
+        get {
+            return _inputBar.height
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
