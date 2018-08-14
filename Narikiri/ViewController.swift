@@ -17,11 +17,11 @@ class ViewController: UIViewController {
         _chatViewController.didMove(toParentViewController: self)
 
 
-        _secTimer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] (timer: Timer) in
+//        _secTimer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] (timer: Timer) in
 //            guard let weakSelf = self else {
 //                return
 //            }
-        }
+//        }
     }
 
     override func didReceiveMemoryWarning() {
