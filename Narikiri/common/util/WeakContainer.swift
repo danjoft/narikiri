@@ -1,4 +1,5 @@
-class WeakContainer<T: AnyObject> {
+// T should be a class type or class type inherited protocol.
+class WeakContainer<T> {
     var wrappers: [Weak<T>] = []
 
     // after append, no need to remove due to weak reference.
@@ -8,7 +9,7 @@ class WeakContainer<T: AnyObject> {
     }
 
     func removeIfExists(_ element: T) {
-        wrappers = wrappers.filter { !$0.isNone && $0.get !== element }
+        wrappers = wrappers.filter { !$0.isNone && ($0.get as AnyObject) !== (element as AnyObject) }
     }
 
     func removeAllNone() {

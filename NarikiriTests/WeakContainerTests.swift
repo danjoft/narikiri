@@ -23,6 +23,15 @@ class WeakContainerTests: XCTestCase {
         XCTAssertTrue(weakWrapper.isNone)
     }
 
+    func testWeakForProtocol() {
+        var obj: _ProtocolType? = _ClassType()
+        let wrapper = Weak<_ProtocolType>(obj!)
+        XCTAssertNotNil(wrapper.get)
+        XCTAssertTrue(obj === wrapper.get)
+        obj = nil
+        XCTAssertNil(wrapper.get)
+    }
+
     func testWeakContainer() {
         var obj1 = UIView()
         var obj2 = UIView()
@@ -82,4 +91,9 @@ class WeakContainerTests: XCTestCase {
         XCTAssertEqual(container.wrappers[0].get, obj1)
         XCTAssertEqual(container.wrappers[1].get, obj3)
     }
+
 }
+
+fileprivate protocol _ProtocolType : class {}
+fileprivate class _ClassType: _ProtocolType {}
+
