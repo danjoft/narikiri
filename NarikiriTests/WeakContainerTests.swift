@@ -64,4 +64,22 @@ class WeakContainerTests: XCTestCase {
         objRaw = UIView()
         XCTAssertNil(obj)
     }
+
+    func testRemove() {
+        let obj1 = UIView()
+        let obj2 = UIView()
+        let obj3 = UIView()
+        let container = WeakContainer<UIView>()
+        container.append(obj1)
+        container.append(obj2)
+        container.append(obj3)
+
+        container.removeIfExists(obj2)
+        print(container.list.count)
+        XCTAssertEqual(container.list.count, 2)
+        print(container.list)
+
+        XCTAssertEqual(container.list[0].get, obj1)
+        XCTAssertEqual(container.list[1].get, obj3)
+    }
 }
