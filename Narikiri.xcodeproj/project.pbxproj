@@ -32,6 +32,8 @@
 		515F451D21156B74000E9BD9 /* BalloonContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515F451C21156B74000E9BD9 /* BalloonContainer.xib */; };
 		515F451E21156B74000E9BD9 /* BalloonContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515F451C21156B74000E9BD9 /* BalloonContainer.xib */; };
 		515F451F21156B74000E9BD9 /* BalloonContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515F451C21156B74000E9BD9 /* BalloonContainer.xib */; };
+		516DA0962122C59200FAAF7E /* DelegateMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DA0952122C59200FAAF7E /* DelegateMap.swift */; };
+		516DA0982122C61100FAAF7E /* DelegateMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DA0972122C61100FAAF7E /* DelegateMapTests.swift */; };
 		518571E5211D5F6C004BD205 /* KeyboardFrameObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518571E4211D5F6C004BD205 /* KeyboardFrameObserver.swift */; };
 		51A56AF1211553EC007F6718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A56AF0211553EC007F6718 /* AppDelegate.swift */; };
 		51A56AF3211553EC007F6718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A56AF2211553EC007F6718 /* ViewController.swift */; };
@@ -88,6 +90,8 @@
 		515F451321155E2C000E9BD9 /* BalloonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonContainer.swift; sourceTree = "<group>"; };
 		515F451721155F16000E9BD9 /* CommonUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIView.swift; sourceTree = "<group>"; };
 		515F451C21156B74000E9BD9 /* BalloonContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalloonContainer.xib; sourceTree = "<group>"; };
+		516DA0952122C59200FAAF7E /* DelegateMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateMap.swift; sourceTree = "<group>"; };
+		516DA0972122C61100FAAF7E /* DelegateMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateMapTests.swift; sourceTree = "<group>"; };
 		518571E4211D5F6C004BD205 /* KeyboardFrameObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFrameObserver.swift; sourceTree = "<group>"; };
 		51A56AED211553EC007F6718 /* Narikiri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Narikiri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A56AF0211553EC007F6718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 				510072D3211BD70300604E85 /* TextBalloonTests.swift */,
 				51107C06211BDD1100D0E948 /* ChatTableTests.swift */,
 				51A808622122B3E700895E02 /* WeakContainerTests.swift */,
+				516DA0972122C61100FAAF7E /* DelegateMapTests.swift */,
 			);
 			path = NarikiriTests;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 			children = (
 				51A808602122B33B00895E02 /* Weak.swift */,
 				51A808642122B68400895E02 /* WeakContainer.swift */,
+				516DA0952122C59200FAAF7E /* DelegateMap.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -462,6 +468,7 @@
 				510072C7211B0CF000604E85 /* ChatTableViewController.swift in Sources */,
 				510072CE211BB6EB00604E85 /* ThemeColor.swift in Sources */,
 				51000EFD211C68DD00138AEE /* ViewSizeCalculateCache.swift in Sources */,
+				516DA0962122C59200FAAF7E /* DelegateMap.swift in Sources */,
 				51000F05211D29AD00138AEE /* ChatInputBar.swift in Sources */,
 				51A808652122B68400895E02 /* WeakContainer.swift in Sources */,
 			);
@@ -474,6 +481,7 @@
 				51A56B09211553ED007F6718 /* NarikiriTests.swift in Sources */,
 				515F451921155F16000E9BD9 /* CommonUIView.swift in Sources */,
 				51107C07211BDD1100D0E948 /* ChatTableTests.swift in Sources */,
+				516DA0982122C61100FAAF7E /* DelegateMapTests.swift in Sources */,
 				515F451521155E2C000E9BD9 /* BalloonContainer.swift in Sources */,
 				51E8AFB32116FFBC0044C80B /* BalloonContainerTests.swift in Sources */,
 				51E8AFB12116FC1D0044C80B /* CommonUIViewTests.swift in Sources */,
