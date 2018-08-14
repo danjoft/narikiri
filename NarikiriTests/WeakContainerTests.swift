@@ -30,27 +30,27 @@ class WeakContainerTests: XCTestCase {
         let container = WeakContainer<UIView>()
         container.append(obj1)
         container.append(obj2)
-        XCTAssertEqual(container.list.count, 2)
-        XCTAssertEqual(container.list[0].get, obj1)
-        XCTAssertEqual(container.list[1].get, obj2)
+        XCTAssertEqual(container.wrappers.count, 2)
+        XCTAssertEqual(container.wrappers[0].get, obj1)
+        XCTAssertEqual(container.wrappers[1].get, obj2)
 
         obj2 = UIView()
-        XCTAssertEqual(container.list.count, 2)
+        XCTAssertEqual(container.wrappers.count, 2)
         let removedCount = container.cleanUp()
         XCTAssertEqual(removedCount, 1)
-        XCTAssertEqual(container.list.count, 1)
-        XCTAssertEqual(container.list[0].get, obj1)
+        XCTAssertEqual(container.wrappers.count, 1)
+        XCTAssertEqual(container.wrappers[0].get, obj1)
 
         obj1 = UIView()
         var obj3 = UIView()
         container.append(obj3)
-        XCTAssertEqual(container.list.count, 1)
-        XCTAssertEqual(obj3, container.list[0].get)
+        XCTAssertEqual(container.wrappers.count, 1)
+        XCTAssertEqual(obj3, container.wrappers[0].get)
 
         obj3 = UIView()
-        XCTAssertTrue(container.list[0].isNone)
+        XCTAssertTrue(container.wrappers[0].isNone)
         _ = container.cleanUp()
-        XCTAssertEqual(container.list.count, 0)
+        XCTAssertEqual(container.wrappers.count, 0)
     }
 
     func testWeakContainer2() {
@@ -58,7 +58,7 @@ class WeakContainerTests: XCTestCase {
         weak var obj = objRaw
         var container = WeakContainer<UIView>()
         container.append(obj!)
-        XCTAssertEqual(obj, container.list[0].get)
+        XCTAssertEqual(obj, container.wrappers[0].get)
 
         container = WeakContainer<UIView>()
         objRaw = UIView()
@@ -75,11 +75,11 @@ class WeakContainerTests: XCTestCase {
         container.append(obj3)
 
         container.removeIfExists(obj2)
-        print(container.list.count)
-        XCTAssertEqual(container.list.count, 2)
-        print(container.list)
+        print(container.wrappers.count)
+        XCTAssertEqual(container.wrappers.count, 2)
+        print(container.wrappers)
 
-        XCTAssertEqual(container.list[0].get, obj1)
-        XCTAssertEqual(container.list[1].get, obj3)
+        XCTAssertEqual(container.wrappers[0].get, obj1)
+        XCTAssertEqual(container.wrappers[1].get, obj3)
     }
 }
