@@ -25,7 +25,7 @@ class MutableChatMessageTests: XCTestCase {
         XCTAssertEqual(_message.text, "Hello Unko World.")
 
         XCTAssertFalse(_message.isIdFixed)
-        XCTAssertFalse(_message.isDirty)
+        XCTAssertTrue(_message.isDirty) // due to not fixed id
     }
 
     func testSetId() {

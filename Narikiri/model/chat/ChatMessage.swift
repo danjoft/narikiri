@@ -22,7 +22,10 @@ protocol MutableChatMessage : ChatMessage {
     var chara: ChatChara { get set }
     var text: String { get set }
 
+    // Unless isIdFixed, always returns true.
     var isDirty: Bool { get }
+
+    // Couldn't call unless isIdFixed.
     func clearDirty()
 }
 
@@ -93,14 +96,20 @@ internal class MutableChatMessageImpl : MutableChatMessage {
         }
     }
 
+    // Unless isIdFixed, always returns true.
     var isDirty: Bool {
         get {
+            if !isIdFixed {
+                return true
+            }
             return _isDirty
         }
     }
 
+    // Couldn't call unless isIdFixed.
     func clearDirty() {
         assert(isDirty, "Need not clear dirty due to clean.")
+        assert(isIdFixed, "Can not clear due to not fixed id.")
         _isDirty = false
     }
 }
