@@ -31,12 +31,12 @@ class DebugChatRoomFactory {
             let text = _messageSamples[ Int(arc4random()) % _messageSamples.count ]
             let messageId = _nextMessagerId
             _nextMessagerId += 1
-            return _ChatMessageImpl(id: messageId, order: order, chara: chara, text: text)
+            return MutableChatMessageImpl(id: messageId, order: order, chara: chara, text: text)
         }
     }
 
     func message(withText text: String, chara: ChatChara? = nil, order: Int = 1) -> ChatMessage {
-        let message = _ChatMessageImpl(id: _nextMessagerId, order: order,
+        let message = MutableChatMessageImpl(id: _nextMessagerId, order: order,
                                        chara: chara ?? sampleChara, text: text)
         _nextMessagerId += 1
         return message

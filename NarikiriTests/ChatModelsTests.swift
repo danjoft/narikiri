@@ -13,7 +13,7 @@ class ChatModelsTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         self.chara = _ChatCharaImpl(id: 3, nickname: "unko")
-        self.message = _ChatMessageImpl(id: 5, order: 1, chara: self.chara, text: "unkokko")
+        self.message = MutableChatMessageImpl(id: 5, order: 1, chara: self.chara, text: "unkokko")
         self.room = _ChatRoomImpl(id: 33, title: "pipipi")
 
         self.cellModel = _ChatTableViewCellModelImpl(message: message)
@@ -44,6 +44,12 @@ class ChatModelsTests: XCTestCase {
     func testChatTableViewCellModelInitializer() {
         XCTAssertEqual(cellModel.messageText, message.text)
         XCTAssertEqual(cellModel.charaNickname, chara.nickname)
+    }
+
+    func testChatMessageDirty() {
+        XCTAssertTrue(message.isIdFixed)
+        message = MutableChatMessageImpl(id: ChatModelSpecialIDs.notFixedId, order: 1, chara: self.chara, text: "unkokko")
+        XCTAssertFalse(message.isIdFixed)
     }
 
 }

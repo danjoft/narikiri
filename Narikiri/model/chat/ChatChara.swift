@@ -1,9 +1,10 @@
-protocol ChatChara {
+protocol ChatChara: class {
     var id: Int { get }
     var nickname: String { get }
 }
 
 internal class _ChatCharaImpl : ChatChara {
+
     var id: Int
     var nickname: String
     
