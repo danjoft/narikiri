@@ -23,6 +23,10 @@
 		510072CE211BB6EB00604E85 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072CD211BB6EB00604E85 /* ThemeColor.swift */; };
 		510072D4211BD70300604E85 /* TextBalloonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510072D3211BD70300604E85 /* TextBalloonTests.swift */; };
 		51107C07211BDD1100D0E948 /* ChatTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51107C06211BDD1100D0E948 /* ChatTableTests.swift */; };
+		513E94692128EDEC004A0E72 /* ChatSourceGettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E94682128EDEC004A0E72 /* ChatSourceGettable.swift */; };
+		513E946B2128EE2B004A0E72 /* ChatSourceMessageUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E946A2128EE2B004A0E72 /* ChatSourceMessageUpdatable.swift */; };
+		513E946D2128EEB6004A0E72 /* ChatSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E946C2128EEB6004A0E72 /* ChatSourceDelegate.swift */; };
+		513E94772128F87B004A0E72 /* ChatSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513E94762128F87B004A0E72 /* ChatSourceTests.swift */; };
 		515F451421155E2C000E9BD9 /* BalloonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515F451321155E2C000E9BD9 /* BalloonContainer.swift */; };
 		515F451521155E2C000E9BD9 /* BalloonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515F451321155E2C000E9BD9 /* BalloonContainer.swift */; };
 		515F451621155E2C000E9BD9 /* BalloonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515F451321155E2C000E9BD9 /* BalloonContainer.swift */; };
@@ -52,6 +56,7 @@
 		51E73A3521263B9200891335 /* MutableChatMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E73A3421263B9200891335 /* MutableChatMessageTests.swift */; };
 		51E73A3721264CF900891335 /* ChatMessageCreatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E73A3621264CF900891335 /* ChatMessageCreatableTests.swift */; };
 		51E73A39212654EC00891335 /* ChatSourceMessagesEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E73A38212654EC00891335 /* ChatSourceMessagesEditorTests.swift */; };
+		51E73A3B21265FF600891335 /* ChatSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E73A3A21265FF600891335 /* ChatSource.swift */; };
 		51E8AFB12116FC1D0044C80B /* CommonUIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8AFB02116FC1D0044C80B /* CommonUIViewTests.swift */; };
 		51E8AFB32116FFBC0044C80B /* BalloonContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8AFB22116FFBC0044C80B /* BalloonContainerTests.swift */; };
 		51E8AFB521171ABC0044C80B /* TextBalloon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8AFB421171ABC0044C80B /* TextBalloon.swift */; };
@@ -93,6 +98,10 @@
 		510072CD211BB6EB00604E85 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		510072D3211BD70300604E85 /* TextBalloonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBalloonTests.swift; sourceTree = "<group>"; };
 		51107C06211BDD1100D0E948 /* ChatTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableTests.swift; sourceTree = "<group>"; };
+		513E94682128EDEC004A0E72 /* ChatSourceGettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSourceGettable.swift; sourceTree = "<group>"; };
+		513E946A2128EE2B004A0E72 /* ChatSourceMessageUpdatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSourceMessageUpdatable.swift; sourceTree = "<group>"; };
+		513E946C2128EEB6004A0E72 /* ChatSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSourceDelegate.swift; sourceTree = "<group>"; };
+		513E94762128F87B004A0E72 /* ChatSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSourceTests.swift; sourceTree = "<group>"; };
 		515F451321155E2C000E9BD9 /* BalloonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonContainer.swift; sourceTree = "<group>"; };
 		515F451721155F16000E9BD9 /* CommonUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIView.swift; sourceTree = "<group>"; };
 		515F451C21156B74000E9BD9 /* BalloonContainer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalloonContainer.xib; sourceTree = "<group>"; };
@@ -122,6 +131,7 @@
 		51E73A3421263B9200891335 /* MutableChatMessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableChatMessageTests.swift; sourceTree = "<group>"; };
 		51E73A3621264CF900891335 /* ChatMessageCreatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCreatableTests.swift; sourceTree = "<group>"; };
 		51E73A38212654EC00891335 /* ChatSourceMessagesEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSourceMessagesEditorTests.swift; sourceTree = "<group>"; };
+		51E73A3A21265FF600891335 /* ChatSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatSource.swift; sourceTree = "<group>"; };
 		51E8AFB02116FC1D0044C80B /* CommonUIViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUIViewTests.swift; sourceTree = "<group>"; };
 		51E8AFB22116FFBC0044C80B /* BalloonContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonContainerTests.swift; sourceTree = "<group>"; };
 		51E8AFB421171ABC0044C80B /* TextBalloon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBalloon.swift; sourceTree = "<group>"; };
@@ -269,6 +279,7 @@
 				51E73A3421263B9200891335 /* MutableChatMessageTests.swift */,
 				51E73A3621264CF900891335 /* ChatMessageCreatableTests.swift */,
 				51E73A38212654EC00891335 /* ChatSourceMessagesEditorTests.swift */,
+				513E94762128F87B004A0E72 /* ChatSourceTests.swift */,
 			);
 			path = NarikiriTests;
 			sourceTree = "<group>";
@@ -295,7 +306,11 @@
 		51DB1B8A2124E3EA00F2B4F6 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				51E73A3A21265FF600891335 /* ChatSource.swift */,
 				51E73A2E212639E100891335 /* ChatSourceMessagesEditor.swift */,
+				513E94682128EDEC004A0E72 /* ChatSourceGettable.swift */,
+				513E946A2128EE2B004A0E72 /* ChatSourceMessageUpdatable.swift */,
+				513E946C2128EEB6004A0E72 /* ChatSourceDelegate.swift */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -486,14 +501,18 @@
 				510072C5211AE16E00604E85 /* ChatTableViewCellModel.swift in Sources */,
 				518571E5211D5F6C004BD205 /* KeyboardFrameObserver.swift in Sources */,
 				51A56AF9211553EC007F6718 /* Narikiri.xcdatamodeld in Sources */,
+				513E94692128EDEC004A0E72 /* ChatSourceGettable.swift in Sources */,
+				51E73A3B21265FF600891335 /* ChatSource.swift in Sources */,
 				51A808612122B33B00895E02 /* Weak.swift in Sources */,
 				515F451421155E2C000E9BD9 /* BalloonContainer.swift in Sources */,
 				51E8AFB521171ABC0044C80B /* TextBalloon.swift in Sources */,
 				510072CC211B277B00604E85 /* DebugChatRoomFactory.swift in Sources */,
 				51A56AF3211553EC007F6718 /* ViewController.swift in Sources */,
+				513E946B2128EE2B004A0E72 /* ChatSourceMessageUpdatable.swift in Sources */,
 				51E8AFCA21197FCC0044C80B /* ChatTableViewCell.swift in Sources */,
 				51DB1B8F2124E7FD00F2B4F6 /* ChatMessageCreator.swift in Sources */,
 				515F451821155F16000E9BD9 /* CommonUIView.swift in Sources */,
+				513E946D2128EEB6004A0E72 /* ChatSourceDelegate.swift in Sources */,
 				51A56AF1211553EC007F6718 /* AppDelegate.swift in Sources */,
 				510072B6211AC6B500604E85 /* ChatRoom.swift in Sources */,
 				51000F0C211D536D00138AEE /* ChatViewController.swift in Sources */,
@@ -521,6 +540,7 @@
 				51107C07211BDD1100D0E948 /* ChatTableTests.swift in Sources */,
 				516DA0982122C61100FAAF7E /* DelegateMapTests.swift in Sources */,
 				515F451521155E2C000E9BD9 /* BalloonContainer.swift in Sources */,
+				513E94772128F87B004A0E72 /* ChatSourceTests.swift in Sources */,
 				51E73A3721264CF900891335 /* ChatMessageCreatableTests.swift in Sources */,
 				51E8AFB32116FFBC0044C80B /* BalloonContainerTests.swift in Sources */,
 				51E8AFB12116FC1D0044C80B /* CommonUIViewTests.swift in Sources */,
