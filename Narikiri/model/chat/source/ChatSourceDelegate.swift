@@ -1,5 +1,5 @@
 protocol ChatSourceDelegate {
-    func onChatSourceChanged(type: ChatSourceEventType)
+    func onChatSourceChanged(eventType: ChatSourceEventType)
 }
 
 enum ChatSourceEventType: String {

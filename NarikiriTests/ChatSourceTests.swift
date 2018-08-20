@@ -105,8 +105,8 @@ class ChatSourceTests: XCTestCase {
 fileprivate class _ChatSourceDelegate: ChatSourceDelegate {
     var calledTypes: [ChatSourceEventType] = []
 
-    func onChatSourceChanged(type: ChatSourceEventType) {
-        calledTypes.append(type)
+    func onChatSourceChanged(eventType: ChatSourceEventType) {
+        calledTypes.append(eventType)
     }
     func clear() {
         calledTypes = []

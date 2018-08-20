@@ -29,9 +29,9 @@ class ChatSource: ChatSourceControlable {
     private func _onChanged(key: ChatSourceEventType) {
         assert(key != .changed, "should set any concrete type because .changed is to be dispatched automatically")
         // notifies respectively
-        _delegateMap.forEachDelegate(key: key) { $0.onChatSourceChanged(type: key) }
+        _delegateMap.forEachDelegate(key: key) { $0.onChatSourceChanged(eventType: key) }
         // notifies totally changed
-        _delegateMap.forEachDelegate(key: .changed) { $0.onChatSourceChanged(type: .changed) }
+        _delegateMap.forEachDelegate(key: .changed) { $0.onChatSourceChanged(eventType: .changed) }
     }
 }
 
