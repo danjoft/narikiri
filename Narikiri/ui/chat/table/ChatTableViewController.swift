@@ -3,21 +3,18 @@ import UIKit
 class ChatTableViewController: UIViewController {
 
     var tableView: UITableView!
-    var delegate: ChatTableViewControllerDelegate?
+    weak var delegate: ChatTableViewControllerDelegate?
 
-    var _cellModels: [ChatTableViewCellModel] = []
-    private let _cellSizeCache = ViewSizeCalculateCache<ChatTableViewCell, ChatTableViewCellModel>(updateViewWithData: { (view, viewModel) in
-        view.model = viewModel
-    })
+    private var _viewModel: ChatTableViewModel = NopChatTableViewModelImpl() // default: null object
 
-    var cellModels: [ChatTableViewCellModel] {
-        get {
-            return _cellModels
+    func setChatSource(chatSource: ChatTableViewModel.ChatSourcePt?) {
+        guard let source = chatSource else {
+            _viewModel = NopChatTableViewModelImpl()
+            return
         }
-        set {
-            _cellModels = newValue
-            tableView.reloadData()
-        }
+        _viewModel = ChatTableViewModelImpl(chatSource: source)
+        _viewModel.delegate = self
+        tableView.reloadData()
     }
 
     override func viewDidLoad() {
@@ -70,6 +67,7 @@ class ChatTableViewController: UIViewController {
         tableView.contentOffset = CGRect(origin: tableView.contentOffset, size: .zero)
             .offsetBy(dx: 0, dy: -diffY).origin
     }
+
 }
 
 extension ChatTableViewController : UITableViewDataSource {
@@ -80,7 +78,7 @@ extension ChatTableViewController : UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         assert(section == 0, "Invalid index of sections: \(section)")
-        return _cellModels.count
+        return _viewModel.cellModels.count
     }
 
 }
@@ -92,17 +90,16 @@ extension ChatTableViewController : UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return _cellModels[indexPath.row].type.estimatedHeight
+        return _viewModel.cellModels[indexPath.row].type.estimatedHeight
     }
 
     private func _getHeight(forRowAt indexPath: IndexPath) -> CGFloat {
-        let cellModel = _cellModels[indexPath.row]
-        let frame = _cellSizeCache.getFrame(model: cellModel, cacheKey: String(cellModel.chatMessageId))
-        return frame.size.height
+        let cellSize = _viewModel.getCachedCellSize(at: indexPath.row)
+        return cellSize.height
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellModel = _cellModels[indexPath.row]
+        let cellModel = _viewModel.cellModels[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: cellModel.type.rawValue) as! ChatTableViewCell
         cell.model = cellModel
         cell.layoutIfNeeded()
@@ -111,6 +108,12 @@ extension ChatTableViewController : UITableViewDelegate {
     }
 }
 
-protocol ChatTableViewControllerDelegate {
+extension ChatTableViewController : ChatTableViewModelDelegate {
+    func onChatTableViewModelUpdated() {
+        tableView.reloadData()
+    }
+}
+
+protocol ChatTableViewControllerDelegate : class {
     func onChatTableViewActivated()
 }

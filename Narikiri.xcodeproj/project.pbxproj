@@ -52,6 +52,12 @@
 		51A808652122B68400895E02 /* WeakContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A808642122B68400895E02 /* WeakContainer.swift */; };
 		51DB1B8F2124E7FD00F2B4F6 /* ChatMessageCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB1B8E2124E7FD00F2B4F6 /* ChatMessageCreator.swift */; };
 		51DB1B952124EA3700F2B4F6 /* ChatModelSpecialIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DB1B942124EA3700F2B4F6 /* ChatModelSpecialIDs.swift */; };
+		51E34BA921296A7C0048872A /* ChatInputBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E34BA821296A7C0048872A /* ChatInputBarViewModel.swift */; };
+		51E34BAB2129894B0048872A /* ChatTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E34BAA2129894B0048872A /* ChatTableViewModel.swift */; };
+		51E34BAD212B92680048872A /* TextFieldObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E34BAC212B92680048872A /* TextFieldObservable.swift */; };
+		51E34BB1212B98790048872A /* TextFieldObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E34BB0212B98790048872A /* TextFieldObservableTests.swift */; };
+		51E34BB3212C9D5B0048872A /* ChatInputBarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E34BB2212C9D5B0048872A /* ChatInputBarViewModelTests.swift */; };
+		51E34BB5212CB5620048872A /* ChatTableViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E34BB4212CB5620048872A /* ChatTableViewModelTests.swift */; };
 		51E73A2F212639E100891335 /* ChatSourceMessagesEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E73A2E212639E100891335 /* ChatSourceMessagesEditor.swift */; };
 		51E73A3521263B9200891335 /* MutableChatMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E73A3421263B9200891335 /* MutableChatMessageTests.swift */; };
 		51E73A3721264CF900891335 /* ChatMessageCreatableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E73A3621264CF900891335 /* ChatMessageCreatableTests.swift */; };
@@ -127,6 +133,12 @@
 		51A808642122B68400895E02 /* WeakContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakContainer.swift; sourceTree = "<group>"; };
 		51DB1B8E2124E7FD00F2B4F6 /* ChatMessageCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCreator.swift; sourceTree = "<group>"; };
 		51DB1B942124EA3700F2B4F6 /* ChatModelSpecialIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModelSpecialIDs.swift; sourceTree = "<group>"; };
+		51E34BA821296A7C0048872A /* ChatInputBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputBarViewModel.swift; sourceTree = "<group>"; };
+		51E34BAA2129894B0048872A /* ChatTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewModel.swift; sourceTree = "<group>"; };
+		51E34BAC212B92680048872A /* TextFieldObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldObservable.swift; sourceTree = "<group>"; };
+		51E34BB0212B98790048872A /* TextFieldObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldObservableTests.swift; sourceTree = "<group>"; };
+		51E34BB2212C9D5B0048872A /* ChatInputBarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputBarViewModelTests.swift; sourceTree = "<group>"; };
+		51E34BB4212CB5620048872A /* ChatTableViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewModelTests.swift; sourceTree = "<group>"; };
 		51E73A2E212639E100891335 /* ChatSourceMessagesEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSourceMessagesEditor.swift; sourceTree = "<group>"; };
 		51E73A3421263B9200891335 /* MutableChatMessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableChatMessageTests.swift; sourceTree = "<group>"; };
 		51E73A3621264CF900891335 /* ChatMessageCreatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCreatableTests.swift; sourceTree = "<group>"; };
@@ -172,6 +184,7 @@
 				510072C4211AE16E00604E85 /* ChatTableViewCellModel.swift */,
 				510072C6211B0CF000604E85 /* ChatTableViewController.swift */,
 				510072C8211B17BD00604E85 /* ChatTableViewCellType.swift */,
+				51E34BAA2129894B0048872A /* ChatTableViewModel.swift */,
 			);
 			path = table;
 			sourceTree = "<group>";
@@ -182,6 +195,7 @@
 				51000F02211D294100138AEE /* ChatInputBar.xib */,
 				51000F04211D29AD00138AEE /* ChatInputBar.swift */,
 				51000F06211D3A4800138AEE /* ChatInputViewController.swift */,
+				51E34BA821296A7C0048872A /* ChatInputBarViewModel.swift */,
 			);
 			path = input;
 			sourceTree = "<group>";
@@ -280,6 +294,9 @@
 				51E73A3621264CF900891335 /* ChatMessageCreatableTests.swift */,
 				51E73A38212654EC00891335 /* ChatSourceMessagesEditorTests.swift */,
 				513E94762128F87B004A0E72 /* ChatSourceTests.swift */,
+				51E34BB0212B98790048872A /* TextFieldObservableTests.swift */,
+				51E34BB2212C9D5B0048872A /* ChatInputBarViewModelTests.swift */,
+				51E34BB4212CB5620048872A /* ChatTableViewModelTests.swift */,
 			);
 			path = NarikiriTests;
 			sourceTree = "<group>";
@@ -339,6 +356,7 @@
 				515F451721155F16000E9BD9 /* CommonUIView.swift */,
 				51000EFC211C68DD00138AEE /* ViewSizeCalculateCache.swift */,
 				518571E4211D5F6C004BD205 /* KeyboardFrameObserver.swift */,
+				51E34BAC212B92680048872A /* TextFieldObservable.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -498,12 +516,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				510072B4211AC61F00604E85 /* ChatMessage.swift in Sources */,
+				51E34BAD212B92680048872A /* TextFieldObservable.swift in Sources */,
 				510072C5211AE16E00604E85 /* ChatTableViewCellModel.swift in Sources */,
 				518571E5211D5F6C004BD205 /* KeyboardFrameObserver.swift in Sources */,
 				51A56AF9211553EC007F6718 /* Narikiri.xcdatamodeld in Sources */,
 				513E94692128EDEC004A0E72 /* ChatSourceGettable.swift in Sources */,
 				51E73A3B21265FF600891335 /* ChatSource.swift in Sources */,
 				51A808612122B33B00895E02 /* Weak.swift in Sources */,
+				51E34BAB2129894B0048872A /* ChatTableViewModel.swift in Sources */,
 				515F451421155E2C000E9BD9 /* BalloonContainer.swift in Sources */,
 				51E8AFB521171ABC0044C80B /* TextBalloon.swift in Sources */,
 				510072CC211B277B00604E85 /* DebugChatRoomFactory.swift in Sources */,
@@ -527,6 +547,7 @@
 				51000F05211D29AD00138AEE /* ChatInputBar.swift in Sources */,
 				51E73A2F212639E100891335 /* ChatSourceMessagesEditor.swift in Sources */,
 				51A808652122B68400895E02 /* WeakContainer.swift in Sources */,
+				51E34BA921296A7C0048872A /* ChatInputBarViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,8 +555,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E34BB5212CB5620048872A /* ChatTableViewModelTests.swift in Sources */,
 				51A56B09211553ED007F6718 /* NarikiriTests.swift in Sources */,
 				51E73A39212654EC00891335 /* ChatSourceMessagesEditorTests.swift in Sources */,
+				51E34BB1212B98790048872A /* TextFieldObservableTests.swift in Sources */,
 				515F451921155F16000E9BD9 /* CommonUIView.swift in Sources */,
 				51107C07211BDD1100D0E948 /* ChatTableTests.swift in Sources */,
 				516DA0982122C61100FAAF7E /* DelegateMapTests.swift in Sources */,
@@ -547,6 +570,7 @@
 				510072D4211BD70300604E85 /* TextBalloonTests.swift in Sources */,
 				51A808632122B3E700895E02 /* WeakContainerTests.swift in Sources */,
 				51E73A3521263B9200891335 /* MutableChatMessageTests.swift in Sources */,
+				51E34BB3212C9D5B0048872A /* ChatInputBarViewModelTests.swift in Sources */,
 				510072C3211AD8C900604E85 /* ChatModelsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

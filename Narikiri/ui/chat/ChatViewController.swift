@@ -10,6 +10,12 @@ class ChatViewController: UIViewController {
     private var _keyboardObserver: KeyboardFrameObserver!
     private var _keyboardOverlapY: CGFloat = 0
 
+    var chatSource: ChatSourceControlable? {
+        didSet {
+            _onChatSourceUpdated()
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,16 +33,6 @@ class ChatViewController: UIViewController {
         _keyboardObserver.delegate = self
 
         _tableViewController.delegate = self
-
-        // setup mock data
-        _tableViewController.cellModels = {()->[ChatTableViewCellModel] in
-            let factory = DebugChatRoomFactory()
-            let messages = factory.messages(number: 20, charas: factory.charas(number: 3))
-            let cellModels = messages.map { (message) -> ChatTableViewCellModel in
-                return _ChatTableViewCellModelImpl(message: message )
-            }
-            return cellModels
-        }()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +42,15 @@ class ChatViewController: UIViewController {
 
     func _finishEditing() {
         view.endEditing(true)
+    }
+
+    func _onChatSourceUpdated() {
+        guard let chatSource = chatSource else {
+            return
+        }
+        _tableViewController.setChatSource(chatSource: chatSource)
+        _inputViewController.setChatSource(chatSource: chatSource)
+        view.setNeedsDisplay()
     }
 
     override func viewDidLayoutSubviews() {

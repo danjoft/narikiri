@@ -28,6 +28,9 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="➤"/>
+                    <connections>
+                        <action selector="_onSendButtonTouched:" destination="-1" eventType="touchUpInside" id="3CH-4V-aGR"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3bZ-rq-pf2" userLabel="_inputField">
                     <rect key="frame" x="8" y="28" width="324" height="30"/>

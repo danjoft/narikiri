@@ -13,11 +13,18 @@ class ChatInputViewController: UIViewController {
         }
     }
 
+    func setChatSource(chatSource: ChatInputBarViewModel.ChatSourcePt?) {
+        guard let source = chatSource else {
+            _inputBar.model = nil
+            return
+        }
+        _inputBar.model = ChatInputBarViewModel(chatSource: source)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         _inputBar = ChatInputBar(frame: view.bounds)
-        _inputBar.textFieldDelegate = self
         view.addSubview(_inputBar)
     }
 
@@ -29,21 +36,5 @@ class ChatInputViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         _inputBar.frame.size = view.frame.size
-    }
-}
-
-extension ChatInputViewController : UITextFieldDelegate {
-
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("begin")
-    }
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        print("end")
-    }
-
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("return")
-        return true
     }
 }
