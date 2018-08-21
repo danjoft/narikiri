@@ -3,6 +3,7 @@ import Foundation
 
 class DebugChatRoomFactory {
 
+    private var _nextRoomId: Int = 1
     private var _nextChatRoomId: Int = 1
     private var _nextCharaId: Int = 1
     private var _nextMessagerId: Int = 1
@@ -17,6 +18,22 @@ class DebugChatRoomFactory {
         }
     }
 
+    func chatSource(numCharas: Int, numMessages: Int) -> ChatSource {
+        let factory = DebugChatRoomFactory()
+        let room = factory.room()
+        let charas = factory.charas(number: numCharas)
+        let messages = factory.messages(number: numMessages, charas: charas)
+
+        let chatSource = ChatSource(room: room, charas: charas, messages: messages, messageCreator: ChatMessageCreator())
+        return chatSource
+    }
+
+    func room() -> ChatRoom {
+        let room = _ChatRoomImpl(id: _nextRoomId, title: "秘密の部屋\(_nextRoomId)")
+        _nextRoomId += 1
+        return room
+    }
+
     func charas(number: Int) -> [ChatChara] {
         return (0..<number).map { (_) -> ChatChara in
             let charaId = _nextCharaId
@@ -25,17 +42,18 @@ class DebugChatRoomFactory {
         }
     }
 
-    func messages(number: Int, charas: [ChatChara]) -> [ChatMessage] {
-        return (0..<number).map { (order: Int) -> ChatMessage in
+    func messages(number: Int, charas: [ChatChara]) -> [MutableChatMessage] {
+        return (0..<number).map { (index: Int) -> MutableChatMessage in
             let chara = charas[ Int(arc4random()) % charas.count ]
             let text = _messageSamples[ Int(arc4random()) % _messageSamples.count ]
             let messageId = _nextMessagerId
             _nextMessagerId += 1
+            let order = index + ChatModelSpecialIDs.initialMessageOrder
             return MutableChatMessageImpl(id: messageId, order: order, chara: chara, text: text)
         }
     }
 
-    func message(withText text: String, chara: ChatChara? = nil, order: Int = 1) -> ChatMessage {
+    func message(withText text: String, chara: ChatChara? = nil, order: Int = 1) -> MutableChatMessage {
         let message = MutableChatMessageImpl(id: _nextMessagerId, order: order,
                                        chara: chara ?? sampleChara, text: text)
         _nextMessagerId += 1
