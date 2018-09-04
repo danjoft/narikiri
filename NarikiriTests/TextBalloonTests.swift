@@ -31,4 +31,26 @@ class TextBalloonTests: XCTestCase {
         XCTAssertEqual(sizeOfTwoLines.width, sizeOfThreeLines.width)
     }
 
+    func testMaxWidthSet() {
+        let balloon = TextBalloon(text: "あああああああああああああああああああああああああああああああああああああああああああああああああああああ")
+
+        func isWidthAround(_ maxWidth: CGFloat) -> Bool {
+            let buffWidth: CGFloat = 40
+            return balloon.frame.width <= maxWidth &&
+                maxWidth - buffWidth < balloon.frame.width
+        }
+
+        balloon.maxWidth = 200
+        XCTAssertTrue( isWidthAround(200) )
+        balloon.maxWidth = 100
+        XCTAssertTrue( isWidthAround(100) )
+        balloon.maxWidth = 150
+        XCTAssertTrue( isWidthAround(150) )
+        balloon.maxWidth = 300
+        XCTAssertTrue( isWidthAround(300) )
+        XCTAssertFalse( isWidthAround(250) )
+        XCTAssertFalse( isWidthAround(200) )
+        XCTAssertFalse( isWidthAround(100) )
+    }
+
 }

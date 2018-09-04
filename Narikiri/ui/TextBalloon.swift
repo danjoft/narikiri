@@ -5,8 +5,19 @@ class TextBalloon: UIView, CommonUIView {
     private var _text: String
     private var _label: UILabel
     private var _container: BalloonContainer
-    var maxWidth: CGFloat
+    var maxWidth: CGFloat {
+        didSet {
+            if maxWidth != oldValue {
+                updateView()
+            }
+        }
+    }
     var maxHeight: CGFloat
+    var padding: CGFloat {
+        get {
+            return _container.margin
+        }
+    }
 
     init(text: String, maxWidth: CGFloat = 200.0, maxHeight: CGFloat = 2000.0) {
         _label = UILabel(frame: .zero)
@@ -54,9 +65,14 @@ class TextBalloon: UIView, CommonUIView {
         _label.text = _text
         _label.numberOfLines = 0
         _label.frame.size = _label.sizeThatFits(CGSize(
-            width:  maxWidth - _container.margin * 2,
-            height: maxHeight - _container.margin * 2))
+            width:  maxWidth - padding * 2,
+            height: maxHeight - padding * 2))
         _container.content = _label
         self.frame.size = _container.frame.size
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        updateView()
     }
 }

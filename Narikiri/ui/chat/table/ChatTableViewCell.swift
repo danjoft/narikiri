@@ -56,16 +56,26 @@ class ChatTableViewCell: UITableViewCell, CommonUIView {
         // it is because... the size of userName is needed below,
         // but wouldn't be able to take the accurate size if you just use .sizeToFit() here.
 
+        let balloonMaxWidth = bounds.width - frameMargin * 2
         balloon.text = _model.messageText
+        balloon.maxWidth = balloonMaxWidth
 
         balloonLayer.frame = CGRect(x: frameMargin,
                                     y: userName.bounds.height + interMargin,
-                                    width: bounds.width - frameMargin * 2,
+                                    width: balloonMaxWidth,
                                     height: balloon.bounds.height)
+
         self.frame.size = CGSize(
             width: bounds.width,
             height: balloonLayer.frame.maxY + frameMargin
         )
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if _model != nil {
+            updateView()
+        }
     }
 
     required init?(coder aDecoder: NSCoder) {
