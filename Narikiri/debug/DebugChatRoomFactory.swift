@@ -44,8 +44,8 @@ class DebugChatRoomFactory {
 
     func messages(number: Int, charas: [ChatChara]) -> [MutableChatMessage] {
         return (0..<number).map { (index: Int) -> MutableChatMessage in
-            let chara = charas[ Int(arc4random()) % charas.count ]
-            let text = _messageSamples[ Int(arc4random()) % _messageSamples.count ]
+            let chara = charas[ Int(arc4random_uniform(UInt32(charas.count))) ]
+            let text = _messageSamples[ Int(arc4random_uniform(UInt32(_messageSamples.count))) ]
             let messageId = _nextMessagerId
             _nextMessagerId += 1
             let order = index + ChatModelSpecialIDs.initialMessageOrder
